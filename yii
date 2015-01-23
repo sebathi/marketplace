@@ -19,6 +19,8 @@ require(__DIR__ . '/vendor/yiisoft/yii2/Yii.php');
 
 $config = require(__DIR__ . '/config/console.php');
 
+Yii::setAlias('@mp', dirname(__DIR__).'/mp');
+
 $application = new yii\console\Application($config);
 $exitCode = $application->run();
 exit($exitCode);
